@@ -149,7 +149,7 @@ def train_epoch(model, optimizer, baseline, lr_scheduler, epoch, val_dataset, pr
                 'cuda_rng_state': torch.cuda.get_rng_state_all(),
                 'baseline': baseline.state_dict()
             },
-            os.path.join('/content/gdrive/My Drive/', 'epoch-{}.pt'.format(epoch))
+            os.path.join('/content/gdrive/MyDrive/saved_models', 'epoch-{}.pt'.format(epoch))
         )
 
     avg_reward = validate(model, val_dataset, opts)
