@@ -172,7 +172,7 @@ class HCVRPDataset(Dataset):
                 {
                     'loc': torch.FloatTensor(size, 2).uniform_(0, 1),
                     # Uniform 1 - 9, scaled by capacities
-                    'demand': (torch.FloatTensor(size).uniform_(0, 45).int() + 1).float(),
+                    'demand': (torch.FloatTensor(size).uniform_(0, 20).int() + 1).float(),
                     'depot': torch.FloatTensor(2).uniform_(0, 1),
                     'capacity': torch.Tensor(CAPACITIES[size])
                 }
