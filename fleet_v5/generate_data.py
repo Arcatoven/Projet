@@ -13,7 +13,7 @@ def generate_hcvrp_data(dataset_size, hcvrp_size, veh_num):
         loc = rnd.uniform(0, 1, size=(dataset_size, hcvrp_size + 1, 2))
         depot = loc[:, -1]
         cust = loc[:, :-1]
-        d = rnd.randint(1, 46, [dataset_size, hcvrp_size+1])
+        d = rnd.randint(1, 21, [dataset_size, hcvrp_size+1])
         d = d[:, :-1]  # the demand of depot is 0, which do not need to generate here
 
         if veh_num == 3:
